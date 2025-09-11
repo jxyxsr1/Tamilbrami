@@ -13,7 +13,7 @@ const Keyboard = () => {
     "𑀘": "ச", "𑀢": "த", "𑀦": "ந", "𑀧": "ப",
     "𑀫": "ம",
   };
-
+  
   // Organize keyboard layout in rows
   const keyboardLayout = [
     ["𑀅", "𑀆", "𑀇", "𑀈", "𑀉", "𑀊"],
