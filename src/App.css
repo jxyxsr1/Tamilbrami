@@ -8,8 +8,6 @@ body {
   padding-top: 80px; /* 👈 pushes content below navbar */
 }
 
-
-
 /* Navbar */
 .navbar {
   background: #1976d2;   /* royal blue */
@@ -135,6 +133,23 @@ body {
 .clear:hover {
   background: #e53935;
   color: white;
+}
+
+/* 🔊 Speak button */
+.speak-btn {
+  margin-top: 12px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.speak-btn:hover {
+  background: #0d47a1;
 }
 
 /* Responsive design */

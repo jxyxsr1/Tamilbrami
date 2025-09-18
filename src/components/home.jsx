@@ -10,7 +10,7 @@ const HomePage = () => {
       <nav className="navbar">
         <div className="logo">தமிழி</div>
         <div className="nav-links">
-          <a href="#image">பட மொழிபெயர்ப்பு</a>
+          <a href="#image"> மொழிபெயர்ப்பு</a>
           <a href="#keyboard">விசைப்பலகை மொழிபெயர்ப்பு</a>
           <a href="#about">எங்களைப் பற்றி</a>
         </div>
@@ -21,6 +21,14 @@ const HomePage = () => {
         <h1>எளிய தமிழாக்கம்</h1>
         <p>படங்கள் அல்லது தட்டச்சு மூலம் உடனடி மொழிபெயர்ப்பு</p>
       </header>
+
+      {/* 🔹 4 Boxes Section like Google Translate */}
+      <section className="mode-section">
+        <div className="mode-box">📝 Text</div>
+        <div className="mode-box">🖼️ Images</div>
+        <div className="mode-box">📄 Documents</div>
+        <div className="mode-box">🌐 Websites</div>
+      </section>
 
       {/* முக்கிய உள்ளடக்கம் */}
       <main className="content">
