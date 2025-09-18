@@ -1,6 +1,6 @@
 import React from "react";
 import Translator from "../components/Translator.jsx"; 
-import Keyboard from "../components/Keyboard.jsx";    
+import Keyboard from "../components/keyboard.jsx";    
 import "../../src/home.css";
 
 const HomePage = () => {
