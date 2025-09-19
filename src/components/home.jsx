@@ -41,7 +41,7 @@ const HomePage = () => {
            <Translator />
         </section>
 
-         {/* Keyboard Section (newly added) */}
+     
         <section id="keyboard" className="card">
           <Keyboard />
         </section>
