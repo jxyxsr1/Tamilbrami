@@ -1,12 +1,10 @@
 import React from "react";
 import Translator from "../components/Translator.jsx"; 
-import Keyboard from "../components/keyboard.jsx";    
 import "../../src/home.css";
 
 const HomePage = () => {
   return (
     <div className="homepage-container">
-      {/* வழிசெலுத்தல் பட்டை */}
       <nav className="navbar">
         <div className="logo">தமிழி</div>
         <div className="nav-links">
@@ -16,40 +14,33 @@ const HomePage = () => {
         </div>
       </nav>
 
-      {/* தலைப்பு பகுதி */}
-      <header className="hero">
-        <h1>எளிய தமிழாக்கம்</h1>
-        <p>படங்கள் அல்லது தட்டச்சு மூலம் உடனடி மொழிபெயர்ப்பு</p>
-      </header>
+      
+     <section
+  className="mode-section"
+  style={{
+    display: "flex",        
+    gap: "20px",            
+    marginLeft: "200px",    
+    marginTop: "30px",      
+    justifyContent: "center" 
+  }}
+>
+  <div className="mode-box" style={{ padding: "10px 20px", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#f0f8ff",marginLeft:"80px" }}>
+    📝 உரை மொழிபெயர்ப்பு
+  </div>
+  <div className="mode-box" style={{ padding: "10px 20px", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#f0f8ff", marginLeft:"80px" }}>
+    🖼️ படத்தை பதிவேற்றவும்
+  </div>
+</section>
 
-      {/* 🔹 4 Boxes Section like Google Translate */}
-      <section className="mode-section">
-        <div className="mode-box">📝 Text</div>
-        <div className="mode-box">🖼️ Images</div>
-        <div className="mode-box">📄 Documents</div>
-        <div className="mode-box">🌐 Websites</div>
-      </section>
 
-      {/* முக்கிய உள்ளடக்கம் */}
-      <main className="content">
-        {/* பட மொழிபெயர்ப்பு */}
+      
+<main className="content">
         <section id="image" className="card">
-          <h2>✦ பட மொழிபெயர்ப்பு</h2>
-          <p className="section-desc">
-            படத்தை பதிவேற்றவும் அல்லது எடுக்கவும் — உடனடி தமிழாக்கம் பெறுங்கள்
-          </p>
-          <Translator />
+           <Translator />
         </section>
+</main>
 
-        {/* விசைப்பலகை மொழிபெயர்ப்பு */}
-        <section id="keyboard" className="card">
-          <h2>✦ விசைப்பலகை மொழிபெயர்ப்பு</h2>
-          <p className="section-desc">
-            நீங்கள் தட்டச்சு செய்யும் உரையை உடனடியாக தமிழில் காணலாம்
-          </p>
-          <Keyboard />
-        </section>
-      </main>
     </div>
   );
 };

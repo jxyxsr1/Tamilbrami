@@ -10,7 +10,7 @@ const Translator = () => {
 
   const MODEL_URL = "https://teachablemachine.withgoogle.com/models/uHiHwmYze/";
 
-  // Tamil letters to speech mapping (உயிரெழுத்து 13)
+  
   const tamilSounds = {
     "அ": "ah",
     "ஆ": "aah",
@@ -27,7 +27,7 @@ const Translator = () => {
     "ஃ": "ak",
   };
 
-  // Load model once
+
   useEffect(() => {
     const loadModel = async () => {
       const loadedModel = await tmImage.load(
@@ -39,18 +39,18 @@ const Translator = () => {
     loadModel();
   }, []);
 
-  // 🔹 Speak Tamil Letter
+  
   const speakTamil = (letter) => {
     if (!letter || letter === "❌ கிடைக்கவில்லை") return;
 
     const utterance = new SpeechSynthesisUtterance();
-    utterance.text = tamilSounds[letter] || letter; // English phonetic or fallback
-    utterance.lang = "ta-IN"; // Tamil language
-    utterance.rate = 0.8; // slower for clarity
+    utterance.text = tamilSounds[letter] || letter; 
+    utterance.lang = "ta-IN"; 
+    utterance.rate = 0.8; 
     window.speechSynthesis.speak(utterance);
   };
 
-  // Handle file upload + prediction
+  
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
     if (!file || !model) return;
@@ -80,10 +80,36 @@ const Translator = () => {
   };
 
   return (
-    <section className="section">
-      <h2>பட மொழிபெயர்ப்பு</h2>
+    <section
+  className="section"
+  style={{
+    padding: "20px",          
+    margin: "30px",  
+    marginLeft: "180px",          
+    border: "2px solid #fff",  
+    borderRadius: "10px",      
+    backgroundColor: "#f9f9f9",
+    textAlign: "center",       
+    boxShadow: "0 4px 8px rgba(0,0,0,0.1)" 
+  }}
+>
+  <h2 style={{ fontSize: "2rem", color: "#333" }}>பட மொழிபெயர்ப்பு</h2>
 
-      <div className="split-container">
+  
+     <div
+  className="split-container"
+  style={{
+    display: "flex",
+    gap: "80px",
+    marginLeft: "150px",  
+    marginRight: "10px",   
+    marginTop: "30px",     
+    marginBottom: "20px",  
+  }}
+>
+ 
+
+
         {/* Input side */}
         <div className="input-box">
           <h3>தமிழ் வட்டெழுத்து</h3>
@@ -106,7 +132,7 @@ const Translator = () => {
           </div>
         </div>
 
-        {/* Result side */}
+        
         <div className="result-box">
           <h3>மொழிபெயர்ப்பு</h3>
           <div className="display-box">
@@ -123,7 +149,7 @@ const Translator = () => {
             )}
           </div>
 
-          {/* 🔊 Speak button */}
+          
           {result && result !== "❌ கிடைக்கவில்லை" && (
             <button
               onClick={() => speakTamil(result)}
