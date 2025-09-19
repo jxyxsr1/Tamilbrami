@@ -1,5 +1,6 @@
 import React from "react";
 import Translator from "../components/Translator.jsx"; 
+import Keyboard from "../components/keyboard.jsx"; 
 import "../../src/home.css";
 
 const HomePage = () => {
@@ -39,6 +40,12 @@ const HomePage = () => {
         <section id="image" className="card">
            <Translator />
         </section>
+
+         {/* Keyboard Section (newly added) */}
+        <section id="keyboard" className="card">
+          <Keyboard />
+        </section>
+      
 </main>
 
     </div>
